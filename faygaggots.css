@@ -1,0 +1,109 @@
+/* === Rainbow animated background === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 1400% 1400%;
+  animation: rainbowFlow 20s ease infinite;
+}
+
+@keyframes rainbowFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Layout === */
+main {
+  max-width: 600px;
+  margin: 60px auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* === Form Inputs === */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+/* === Labels === */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* === Radio & Checkbox styling === */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* === Buttons === */
+button,
+input[type="submit"] {
+  background: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #ff00ff;
+  color: white;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* === Submission Message === */
+#submissionMessage {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 1.3em;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  animation: popIn 0.5s ease forwards;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #eee;
+  font-size: 0.9em;
+}
